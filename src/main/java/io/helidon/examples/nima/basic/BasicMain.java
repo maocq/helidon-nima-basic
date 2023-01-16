@@ -43,8 +43,7 @@ public class BasicMain {
                 .start();
          */
         WebServer.builder()
-                .port(8080)
-                .host("0.0.0.0")
+                .defaultSocket(builder -> builder.port(8080).host("0.0.0.0"))
                 .routing(BasicMain::routing)
                 .start();
     }
